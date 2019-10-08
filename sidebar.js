@@ -3,7 +3,7 @@
  */
 Draw.loadPlugin(function(ui) {
 	console.log(ui.sidebar);
-	console.log(ui.sidebar.palettes);
+	console.log(ui.sidebar.palettes.general[1]);
     // Adds custom sidebar entry
  ui.sidebar.addPalette('esolia', 'eSolia', true, function(content) {
 
