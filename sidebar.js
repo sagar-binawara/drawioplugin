@@ -55,7 +55,7 @@ Draw.loadPlugin(function(ui) {
 		return vars;
 	};
 	
-	 ui.sidebar.removePalette('basic');
+	 ui.sidebar.remove('basic');
 	
 //    // Adds resource for action
 //    mxResources.parse('helloWorldAction=Hello, World!');
