@@ -55,14 +55,7 @@ Draw.loadPlugin(function(ui) {
 		return vars;
 	};
 	
-	 ui.sidebar.addPalette('new', 'new', true, function(content) {
-
-        // content.appendChild(ui.sidebar.createVertexTemplate(null, 120, 60));
-        content.appendChild(ui.sidebar.createVertexTemplate('shape=image;image=http://download.esolia.net.s3.amazonaws.com/img/eSolia-Logo-Color.svg;resizable=0;movable=0;rotatable=0', 100, 100));
-        content.appendChild(ui.sidebar.createVertexTemplate('text;spacingTop=-5;fontFamily=Courier New;fontSize=8;fontColor=#999999;resizable=0;movable=0;rotatable=0', 100, 100));
-        content.appendChild(ui.sidebar.createVertexTemplate('rounded=1;whiteSpace=wrap;gradientColor=none;fillColor=#004C99;shadow=1;strokeColor=#FFFFFF;align=center;fontColor=#FFFFFF;strokeWidth=3;fontFamily=Courier New;verticalAlign=middle', 100, 100));
-        content.appendChild(ui.sidebar.createVertexTemplate('curved=1;strokeColor=#004C99;endArrow=oval;endFill=0;strokeWidth=3;shadow=1;dashed=1', 100, 100));
-    });
+	 ui.sidebar.removePalette('basic');
 	
 //    // Adds resource for action
 //    mxResources.parse('helloWorldAction=Hello, World!');
