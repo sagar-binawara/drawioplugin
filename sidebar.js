@@ -2,10 +2,10 @@
  * Sample plugin.
  */
 Draw.loadPlugin(function(ui) {
-	console.log('ui.sidebar');
+	console.log(ui);
 	console.log(ui.sidebar);
     // Adds custom sidebar entry
-    ui.sidebar.addPalette('esolia', 'eSolia', true, function(content) {
+ ui.sidebar.addPalette('esolia', 'eSolia', true, function(content) {
 
         // content.appendChild(ui.sidebar.createVertexTemplate(null, 120, 60));
         content.appendChild(ui.sidebar.createVertexTemplate('shape=image;image=http://download.esolia.net.s3.amazonaws.com/img/eSolia-Logo-Color.svg;resizable=0;movable=0;rotatable=0', 100, 100));
