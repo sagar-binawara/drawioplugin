@@ -81,7 +81,7 @@ Draw.loadPlugin(function(ui) {
 //    // Reorders menubar
 //    ui.menubar.container.insertBefore(ui.menubar.container.lastChild,
 //        ui.menubar.container.lastChild.previousSibling.previousSibling);
-//
+// 
 //    // Adds toolbar button
 //    ui.toolbar.addSeparator();
 //    var elt = ui.toolbar.addItem('', 'helloWorldAction');
