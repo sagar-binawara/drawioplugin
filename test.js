@@ -64,8 +64,34 @@ node.setAttribute('Prop2', 'value2');
 
 	// Destroys the shape number
 	var destroy = graph.cellRenderer.destroy;
+	graph.cellRenderer.destroy = function(state)
+	{
+		destroy.apply(this, arguments);
+		
+		if (state.secondLabel != null)
+		{
+			state.secondLabel.destroy();
+			state.secondLabel = null;
+		}
+	};
 	
+	graph.cellRenderer.getShapesForState = function(state)
+	{	
+// 	 	alert(state.shape);
+// 		alert(state.text);
+// 		alert(state.secondLabel);
+// 		alert(state.control);
+// 		alert(state.style);
+// 		alert(state.style[mxConstants.STYLE_SHAPE]);
+		return [state.shape, state.text, state.secondLabel, state.control];
+	};
 	
+	var validate = graph.view.validate;
+	graph.view.validate = function()
+	{
+		counter = 0;
+		validate.apply(this, arguments);
+	};
 	
 	// Extends View menu
 	mxResources.parse('number=Number');
@@ -78,7 +104,17 @@ node.setAttribute('Prop2', 'value2');
     });
 	
     action.setToggleAction(true);
+	action.setSelectedCallback(function() { return enabled; });
+    
+	var menu = ui.menus.get('view');
+	var oldFunct = menu.funct;
 	
+	menu.funct = function(menu, parent)
+	{
+		oldFunct.apply(this, arguments);
+		
+		ui.menus.addMenuItems(menu, ['-', 'number'], parent);
+	};
 	
 	// Forces refresh if file was loaded before plugin
 	if (ui.getCurrentFile() != null)
