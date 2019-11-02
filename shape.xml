@@ -1,4 +1,4 @@
-<shapes name="mxgraph.arrows">
+<shapes name="mxgraph.new">
 <shape aspect="variable" h="100" name="Pump" strokewidth="inherit" w="100">
   <connections>
     <constraint name="Pump.Suction" perimeter="0" x="0" y="0.5"/>
