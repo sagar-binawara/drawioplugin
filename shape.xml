@@ -1,0 +1,21 @@
+<shapes name="mxgraph.arrows">
+<shape aspect="variable" h="100" name="Pump" strokewidth="inherit" w="100">
+  <connections>
+    <constraint name="Pump.Suction" perimeter="0" x="0" y="0.5"/>
+    <constraint name="Pump.Discharge" perimeter="0" x="1" y="0.5"/>
+  </connections>
+  <background>
+    <ellipse h="100" w="100" x="0" y="0"/>
+  </background>
+  <foreground>
+    <fillstroke/>
+    <path>
+      <move x="100" y="50"/>
+      <line x="50" y="0"/>
+      <move x="100" y="50"/>
+      <line x="50" y="100"/>
+    </path>
+    <stroke/>
+  </foreground>
+</shape>
+</shapes>
